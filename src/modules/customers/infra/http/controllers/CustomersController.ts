@@ -8,8 +8,11 @@ import {Request, Response} from "express";
 
 export class CustomersController {
 	public async index(request: Request, response: Response): Promise<Response> {
+		const page = request.query.page ? Number(request.query.page) : 1
+		const limit = request.query.page ? Number(request.query.page) : 15
+
 		const showCustomersService = container.resolve(ShowAllCostumersService)
-		const customers = await showCustomersService.execute()
+		const customers = await showCustomersService.execute({page, limit})
 
 		return response.status(200).json(customers)
 	}

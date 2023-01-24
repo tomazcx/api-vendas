@@ -7,11 +7,11 @@ export class SessionsController {
 		const createSessionServce = container.resolve(CreateSessionService)
 		const {email, password} = request.body
 
-		const token = await createSessionServce.execute({email, password})
+		const tokenObj = await createSessionServce.execute({email, password})
 
 		return response.status(200).json({
 			status: "Authenticated",
-			token: token
+			token: tokenObj.token
 		})
 	}
 }

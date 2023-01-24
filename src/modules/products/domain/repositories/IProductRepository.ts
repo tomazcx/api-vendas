@@ -10,6 +10,6 @@ export interface IProductRepository {
 	find(): Promise<IProduct[]>
 	create(data: ICreateProduct): Promise<IProduct>
 	save(data: ICreateProduct | IUpdateProductOrder[]): Promise<IProduct>
-	uodateStock(products: IUpdateStockProduct[]): Promise<void>
+	updateStock(products: IUpdateStockProduct[]): Promise<void>
 	deleteById(id: number): Promise<void>
 }

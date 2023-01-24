@@ -1,7 +1,5 @@
-import {getCustomRepository} from "typeorm"
 import AppError from "@shared/errors/AppError";
 import redisCache from "@shared/cache/RedisCache";
-import {ProductRepository} from "../infra/typeorm/repositories/ProductsRepository";
 import {inject, injectable} from "tsyringe";
 import {IProductRepository} from "../domain/repositories/IProductRepository";
 

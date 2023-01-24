@@ -2,7 +2,6 @@ import {ICreateCustomer} from "@modules/customers/domain/models/ICreateCustomer"
 import {ICustomer} from "@modules/customers/domain/models/ICustomer";
 import {ICustomersRepository} from "@modules/customers/domain/repositories/ICustomerRepository";
 import {Customer} from "@modules/customers/infra/typeorm/entities/Customer";
-import {getRepository, Repository} from "typeorm";
 
 export class FakeCustomersRepository implements ICustomersRepository {
 
